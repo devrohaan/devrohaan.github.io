@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react";
 import svgr from "vite-plugin-svgr";
 
 export default defineConfig({
-  base: "/devrohaan.github.io/",
+  base: "/",
   plugins: [react(), svgr()],
   resolve: {
     dedupe: ["react", "react-dom"],
