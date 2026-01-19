@@ -2,7 +2,7 @@ import styles from "./Profile.module.css";
 import { GithubLogo, MoonStars, Sun, LinkedinLogo } from "phosphor-react";
 import ProfilePicTransparent from "../../assets/profile-transparent.png";
 import ProfilePic from "../../assets/profile.png";
-import MailBox from "../../assets/MailBox.svg?react";
+import MailBox from "../../assets/mailbox.svg?react";
 import ActionButtons from "./ActionButtons";
 import InfoBubble from "./InfoBubble";
 import Footer from "./Footer";
