@@ -2,7 +2,7 @@ import { ChatCircleDots } from "phosphor-react";
 import { useState, useEffect } from "react";
 import styles from "./Profile.module.css";
 
-export default function InfoBubble() {
+export default function InfoBubble({ dark }) {
   const [showBubble, setShowBubble] = useState(false);
 
   useEffect(() => {
@@ -18,7 +18,7 @@ export default function InfoBubble() {
       onMouseLeave={() => setShowBubble(false)}
       onClick={() => setShowBubble(!showBubble)}
     >
-      <ChatCircleDots size={32} weight="fill" />
+      <ChatCircleDots color={dark ? "#fff" : "#000"} size={32} weight="fill" />
 
       {/* Bubble */}
       <div

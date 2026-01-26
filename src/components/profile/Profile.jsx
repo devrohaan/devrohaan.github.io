@@ -1,8 +1,9 @@
 import styles from "./Profile.module.css";
-import { GithubLogo, MoonStars, Sun, LinkedinLogo } from "phosphor-react";
+import { MoonStars, Sun, LinkedinLogo } from "phosphor-react";
 import ProfilePicTransparent from "../../assets/profile-transparent.png";
 import ProfilePic from "../../assets/profile.png";
-import MailBox from "../../assets/mailbox.svg?react";
+import MailBoxLogo from "../../assets/mailbox.svg?react";
+import GithubLogo from "../../assets/github.svg?react";
 import ActionButtons from "./ActionButtons";
 import InfoBubble from "./InfoBubble";
 import Footer from "./Footer";
@@ -11,13 +12,15 @@ export default function Profile({ dark, toggleDark }) {
   return (
     <section id="rohaan" className={styles.container}>
       <div className={styles.colorModeContainer}>
-        <InfoBubble />
-        <img
-          src={dark ? ProfilePic : ProfilePicTransparent}
-          className={styles.rohaan}
-          alt="Profile picture of Rohan Bagwe"
-        />
-        <div className={styles.toggleTheme}>
+        <div style={{ position: "relative" }}>
+          <img
+            src={ProfilePicTransparent}
+            className={styles.rohaan}
+            alt="Profile picture of Rohan Bagwe"
+          />
+          <InfoBubble dark={dark} />
+        </div>
+        <div>
           {dark ? (
             <Sun onClick={toggleDark} color="#ffd93d" size={32} weight="fill" />
           ) : (
@@ -55,12 +58,11 @@ export default function Profile({ dark, toggleDark }) {
             <GithubLogo
               onClick={toggleDark}
               color={dark ? "#fff" : "#222"}
-              size={50}
               weight="fill"
             />
           </a>
           <a href="mailto:bagwer@tcd.ie" target="_blank">
-            <MailBox
+            <MailBoxLogo
               onClick={toggleDark}
               color={dark ? "#fff" : "#222"}
               weight="fill"
